@@ -1,4 +1,3 @@
-//Solution to http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion/
 #include <map>
 #include <set>
 #include <list>
@@ -122,12 +121,16 @@ public:
                 }
                 else if (temp[i][j] == longest_path)
                 {
-                    max_drop = drop[i][j];
+                    if (drop[i][j] > max_drop)
+                    {
+                        max_drop = drop[i][j];
+                    }
+                    
                 }
             }
         }
         stringstream ss;
-        ss << longest_path << max_drop;
+        ss << longest_path <<" "<< max_drop;
         return ss.str();
     }
     void print()
@@ -140,6 +143,7 @@ public:
             }
             cout << endl;
         }
+
         cout << endl;
         for (int i = 0; i < N; i++)
         {
@@ -173,7 +177,9 @@ int main() {
         skii_map.push_back(v);
     }
     RedmartSkii *r = new RedmartSkii(N, skii_map);
+    
     cout << r->findSteep();
+    //r->print();
     return 0;
 }
 
