@@ -125,9 +125,9 @@ public:
                     {
                         max_drop = drop[i][j];
                     }
-                    
                 }
             }
+
         }
         stringstream ss;
         ss << longest_path <<" "<< max_drop;
@@ -135,6 +135,7 @@ public:
     }
     void print()
     {
+        cout << endl;
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < N; j++)
@@ -158,8 +159,8 @@ public:
 
 
 int main() {
-//    ifstream cin;
-//    cin.open("/Users/qasimzeeshan/Documents/cpp/TC/TC/map.txt", ios::in);
+    ifstream cin;
+    cin.open("/Users/qasimzeeshan/Documents/cpp/TC/TC/a.txt", ios::in);
     int N;
     vector<vector<int>> skii_map;
     
@@ -179,7 +180,7 @@ int main() {
     RedmartSkii *r = new RedmartSkii(N, skii_map);
     
     cout << r->findSteep();
-    //r->print();
+    r->print();
     return 0;
 }
 
