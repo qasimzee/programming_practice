@@ -103,6 +103,7 @@ public:
     {
         this->skii_map = skii_map;
         memset(temp, 0, sizeof(temp[0][0]) * 1000 * 1000);
+        memset(drop, 0, sizeof(drop[0][0]) * 1000 * 1000);
         this->N = N;
     }
     string findSteep()
@@ -140,6 +141,15 @@ public:
         {
             for (int j = 0; j < N; j++)
             {
+                cout << skii_map[i][j] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
                 cout << temp[i][j] << " ";
             }
             cout << endl;
@@ -160,7 +170,7 @@ public:
 
 int main() {
     ifstream cin;
-    cin.open("/Users/qasimzeeshan/Documents/cpp/TC/TC/a.txt", ios::in);
+    cin.open("/Users/qasimzeeshan/Documents/cpp/TC/TC/map.txt", ios::in);
     int N;
     vector<vector<int>> skii_map;
     
@@ -180,7 +190,7 @@ int main() {
     RedmartSkii *r = new RedmartSkii(N, skii_map);
     
     cout << r->findSteep();
-    r->print();
+//    r->print();
     return 0;
 }
 
