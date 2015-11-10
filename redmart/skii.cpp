@@ -127,37 +127,6 @@ public:
         ss << longest_path <<" "<< max_drop;
         return ss.str();
     }
-    void print()
-    {
-        cout << endl;
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                cout << skii_map[i][j] << " ";
-            }
-            cout << endl;
-        }
-        cout << endl;
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                cout << paths[i][j] << " ";
-            }
-            cout << endl;
-        }
-        
-        cout << endl;
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                cout << drop[i][j] << " ";
-            }
-            cout << endl;
-        }
-    }
 };
 
 
