@@ -132,7 +132,7 @@ public:
 
 int main() {
     ifstream cin;
-    cin.open("/file/to/path", ios::in);
+    cin.open("path/to/file", ios::in);
     int N;
     vector<vector<int>> skii_map;
     
