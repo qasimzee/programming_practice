@@ -1,4 +1,3 @@
-i//https://leetcode.com/problems/excel-sheet-column-number/
 //https://leetcode.com/problems/excel-sheet-column-number/
 #include <cmath>
 #include <cstdio>
