@@ -1,3 +1,4 @@
+//solution to is-power-of-two
 class Solution {
   public:
     bool isPowerOfTwo(int n) {
