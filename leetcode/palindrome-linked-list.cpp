@@ -1,12 +1,4 @@
-//https://leetcode.com/problems/palindrome-linked-list/
-/**
-  * Definition for singly-linked list.
-  *  * struct ListNode {
-  *   *     int val;
-  *    *     ListNode *next;
-  *     *     ListNode(int x) : val(x), next(NULL) {}
-  *      * };
-  *       */
+//Solution to https://leetcode.com/problems/palindrome-linked-list/
 class Solution {
   public:
     bool isPalindrome(ListNode* head) {
