@@ -16,12 +16,14 @@ class Solution {
         sign = false;
         i++;
       }
-      int prev_ret = 0;
+      long long prev_ret = 0;
       while (i < str.size() && str[i] <= '9' && str[i] >= '0') {
-        prev_ret = ret;
+
         ret *= 10;
         ret += (str[i] - '0');
-        if (ret < prev_ret) {
+        prev_ret *= 10;
+        prev_ret += (str[i] - '0');
+        if (ret != prev_ret) {
           if (sign) return INT_MIN;
           return INT_MAX;
         }
