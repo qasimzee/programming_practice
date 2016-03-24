@@ -1,24 +1,19 @@
+//https://leetcode.com/problems/counting-bits/
 class Solution {
   public:
+    int countBBits(int n) {
+      int ans = 0;
+      while (n > 0) {
+        ans += n % 2;
+        n /= 2;
+      }
+      return ans;
+    }
     vector<int> countBits(int num) {
       vector<int> ret;
-      if (num == 0) {
-        ret.push_back(0);
-        return ret;
+      for (int i = 0; i <= num; i++) {
+        ret.push_back(countBBits(i));
       }
-      ret.push_back(0);
-      if (num == 1) {
-        ret.push_back(1);
-        return ret;
-      }
-      ret.push_back(1);
-      if (num == 2) {
-        ret.push_back(1);
-        return ret;
-      }
-      ret.push_back(1);
-      for (int i = 3; i <= num; i++) {
-
-      }
+      return ret;
     }
 };
