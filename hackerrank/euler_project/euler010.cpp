@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/contests/projecteuler/challenges/euler010
 #include <vector>
 #include <cmath>
 #include <iostream>
