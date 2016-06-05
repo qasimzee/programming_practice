@@ -1,4 +1,4 @@
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler016
+#Power digit sum: https://www.hackerrank.com/contests/projecteuler/challenges/euler016
 
 def sumPower(n):
 	power = pow(2, n)
