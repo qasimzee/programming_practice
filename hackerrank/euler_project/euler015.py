@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#Lattice paths: https://www.hackerrank.com/contests/projecteuler/challenges/euler015
 
 def factorial(n):
 	x = 1;
