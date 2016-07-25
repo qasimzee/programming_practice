@@ -28,10 +28,10 @@ string GetString(long long n)
 {
   if (n == 0)
     return "Zero";
-  string parts[5] = {"Thousand ", "Million ", "Billion ", "Trillion "};
+  string parts[5] = {"", "Thousand ", "Million ", "Billion ", "Trillion "};
   string numbers[] = {"One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ",
     "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "};
-  string tens[] = {"Twenty ", "Thirty ", "Fourty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "};
+  string tens[] = {"Twenty ", "Thirty ", "Forty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "};
 
   vector<string> v;
 
@@ -48,12 +48,13 @@ string GetString(long long n)
     {
       if (x <= 19)
       {
-        ans += numbers[x-1];
+        ans += numbers[x - 1];
       }
       else
       {
         ans += tens[x / 10 - 2];
-        ans += numbers[x % 10 - 1];
+        if (x % 10 - 1 >= 0)
+          ans += numbers[x % 10 - 1];
       }
     }
 
@@ -62,11 +63,11 @@ string GetString(long long n)
 
   }
   string ret = "";
-  for (int i = v.size() - 1; i >= 1; i--)
+  for (int i = v.size() - 1; i >= 0; i--)
   {
-    ret += v[i] + parts[i - 1];
+    if (v[i].size() > 0)
+      ret += v[i] + parts[i];
   }
-  ret += v[0];
   ret.erase(ret.end() - 1);
   return ret;
 }
