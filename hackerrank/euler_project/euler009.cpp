@@ -1,5 +1,5 @@
 //https://www.hackerrank.com/contests/projecteuler/challenges/euler009
-//
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
