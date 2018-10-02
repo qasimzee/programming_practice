@@ -6,20 +6,17 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        tmp_nums = [num for num in nums]
-        nums.sort()
-        ptr1 = 0
-        ptr2 = len(nums) - 1
-        while nums[ptr1] + nums[ptr2] != target:
-            if nums[ptr1] + nums[ptr2] > target:
-                ptr2 -= 1
-            elif nums[ptr1] + nums[ptr2] < target:
-                ptr1 += 1
-        first_num = -1
-        second_num = -1
-        for i in range(len(tmp_nums)):
-            if first_num == -1 and nums[ptr1] == tmp_nums[i]:
-                first_num = i
-            elif second_num == -1 and nums[ptr2] == tmp_nums[i]:
-                second_num = i
-        return [first_num, second_num]
+        sorted_nums = sorted(nums)
+        i = 0
+        j = len(sorted_nums) - 1
+        while sorted_nums[i] + sorted_nums[j] != target:
+            if sorted_nums[i] + sorted_nums[j] > target:
+                j -= 1
+            elif sorted_nums[i] + sorted_nums[j] < target:
+                i += 1
+        i = nums.index(sorted_nums[i])
+        for x in range(len(nums)):
+            if sorted_nums[j] == nums[x] and i != x:
+                j = x
+                break
+        return [i, j]
