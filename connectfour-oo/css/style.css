@@ -1,0 +1,110 @@
+body{
+  background:#fff;
+  color:#333;
+  font-family:'Arial';
+}
+div.board, div.controls {
+  display: table;
+  margin: 0 auto;
+}
+
+div.controls {
+  margin-top: 10px;
+}
+h1 {
+  text-align: center;
+}
+div.cell {
+  float: left;
+  border: 1px dashed #555;
+  width: 50px;
+}
+div.row {
+  clear: both;
+}
+div.row, div.cell {
+  height: 50px;
+  cursor: pointer;
+}
+
+div.piece, div.current-piece, div.current-move {
+  border-radius: 50%;
+  height: 49px;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 51px;
+  margin-top: 1px;
+}
+
+div.current-move {
+  background-color: red;
+  display: inline-block;
+}
+
+div.piece {
+  background-color: '#fff';
+}
+
+div.label {
+  display: inline-block;
+  height: 60px;
+  vertical-align: middle;
+}
+
+a.reset {
+  display: block;
+}
+
+div.winning-cell {
+    animation: animationFrames 1s infinite;
+    -webkit-animation: animationFrames 1s infinite;
+    -moz-animation: animationFrames 1s infinite;
+    -o-animation: animationFrames 1s infinite;
+    -ms-animation: animationFrames 1s infinite;
+}
+
+@keyframes animationFrames{
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+@-o-keyframes animationFrames {
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
+}
